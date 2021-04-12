@@ -36,12 +36,11 @@ def play():
     allFiles = getListOfFiles(path)
     print(played_songs)
     print("***")
-    print(allFiles)
-    allFiles = [x for x in allFiles if x not in played_songs]
 
     for song in allFiles:
         if ".mp3" in song:
-            song_list.append(song)
+            if song not in played_songs:
+                song_list.append(song)
     if song_list:
         randomfile = random.choice(song_list)
     else:
