@@ -2,6 +2,7 @@
 #set audio output to 3.5 mm and made sure volume was turned up
 #instaled omxplayer
 
+import time
 import os
 import random
 import pprint
@@ -46,7 +47,7 @@ def play():
         randomfile = random.choice(song_list)
     else:
         print("Cannot get songs")
-        os.sleep(5)
+        time.sleep(5)
         print("Quitting!")
         exit()
 
