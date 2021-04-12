@@ -39,7 +39,11 @@ def play():
     for song in allFiles:
         if ".mp3" in song:
             song_list.append(song)
-    randomfile = random.choice(song_list)
+    if song_list:
+        randomfile = random.choice(song_list)
+    else:
+        print("Cannot get songs")
+        exit()
 
     print(randomfile)
 
