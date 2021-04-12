@@ -34,3 +34,4 @@ print(randomfile)
 input = "omxplayer "+randomfile
 result = os.popen(gam_input).read()
 print(result)
+print("Done")
