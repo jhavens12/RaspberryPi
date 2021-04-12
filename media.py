@@ -34,6 +34,7 @@ def getListOfFiles(dirName):
 def play():
     song_list = []
     allFiles = getListOfFiles(path)
+    print(played_songs)
     allFiles = [x for x in allFiles if x not in played_songs]
 
     for song in allFiles:
@@ -43,6 +44,7 @@ def play():
         randomfile = random.choice(song_list)
     else:
         print("Cannot get songs")
+        print("Quitting!")
         exit()
 
     print(randomfile)
