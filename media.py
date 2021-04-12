@@ -37,7 +37,7 @@ randomfile = random.choice(song_list)
 
 print(randomfile)
 
-input = "omxplayer '"+randomfile+"'"
+input = "omxplayer -o local '"+randomfile+"'"
 result = os.popen(input).read()
 print(result)
 print("Done")
