@@ -10,7 +10,7 @@ set_output = "amixer -q cset numid=1 1"
 result = os.popen(set_output).read()
 print(result)
 
-path = "/media/"
+path = "/media/usb0"
 
 played_songs = []
 
@@ -39,7 +39,7 @@ def play():
 
     for song in allFiles:
         if ".mp3" in song:
-            print(song)
+            print("Found Song:,",song)
             if song not in played_songs:
                 song_list.append(song)
     if song_list:
@@ -49,7 +49,7 @@ def play():
         print("Quitting!")
         exit()
 
-    print(randomfile)
+    print("Playing:",randomfile)
 
     input = 'omxplayer -o local "'+randomfile+'"'
     result = os.popen(input).read()
