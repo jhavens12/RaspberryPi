@@ -46,6 +46,7 @@ def play():
         randomfile = random.choice(song_list)
     else:
         print("Cannot get songs")
+        os.sleep(5)
         print("Quitting!")
         exit()
 
