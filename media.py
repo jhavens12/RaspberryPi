@@ -35,7 +35,7 @@ def play():
 
     print(randomfile)
 
-    input = "omxplayer -o local '"+randomfile+"'"
+    input = 'omxplayer -o local "'+randomfile+'"'
     result = os.popen(input).read()
     print(result)
     print("Done Playing")
