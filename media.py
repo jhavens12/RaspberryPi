@@ -31,7 +31,7 @@ randomfile = random.choice(song_list)
 
 print(randomfile)
 
-input = "omxplayer "+randomfile
+input = "omxplayer '"+randomfile+"'"
 result = os.popen(input).read()
 print(result)
 print("Done")
