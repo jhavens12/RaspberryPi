@@ -7,10 +7,6 @@ import os
 import random
 import pprint
 
-set_output = "amixer -q cset numid=1 1"
-result = os.popen(set_output).read()
-print(result)
-
 path = "/media/usb0"
 
 played_songs = []
