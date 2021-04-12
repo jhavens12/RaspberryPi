@@ -35,3 +35,4 @@ input = "omxplayer "+randomfile
 result = os.popen(gam_input).read()
 print(result)
 print("Done")
+print("Done 2")
