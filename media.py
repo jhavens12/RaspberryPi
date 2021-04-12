@@ -2,7 +2,7 @@ import os
 import random
 import pprint
 
-path = "/Media/"
+path = "/media/"
 
 
 def getListOfFiles(dirName):
@@ -32,7 +32,7 @@ randomfile = random.choice(song_list)
 print(randomfile)
 
 input = "omxplayer "+randomfile
-result = os.popen(gam_input).read()
+result = os.popen(input).read()
 print(result)
 print("Done")
 print("Done 2")
