@@ -35,6 +35,8 @@ def play():
     song_list = []
     allFiles = getListOfFiles(path)
     print(played_songs)
+    print("***")
+    print(allFiles)
     allFiles = [x for x in allFiles if x not in played_songs]
 
     for song in allFiles:
