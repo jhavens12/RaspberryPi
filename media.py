@@ -1,3 +1,7 @@
+#used USBMOUNT to auto mount USBs, modified to add exfat file type
+#set audio output to 3.5 mm and made sure volume was turned up
+#instaled omxplayer
+
 import os
 import random
 import pprint
@@ -7,6 +11,8 @@ result = os.popen(set_output).read()
 print(result)
 
 path = "/media/"
+
+played_songs = []
 
 def getListOfFiles(dirName):
     # create a list of file and sub directories
@@ -28,6 +34,8 @@ def getListOfFiles(dirName):
 def play():
     song_list = []
     allFiles = getListOfFiles(path)
+    allFiles = [x for x in allFiles if x not in played_songs]
+
     for song in allFiles:
         if ".mp3" in song:
             song_list.append(song)
@@ -39,6 +47,7 @@ def play():
     result = os.popen(input).read()
     print(result)
     print("Done Playing")
+    return randomfile
 
 while True:
-    play()
+    played_songs.append (play())
