@@ -36,7 +36,7 @@ def play():
 
     for song in allFiles:
         if ".mp3" in song:
-            print("Found Song:,",song)
+            #print("Found Song:,",song)
             if song not in played_songs:
                 song_list.append(song)
     if song_list:
