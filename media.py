@@ -2,6 +2,9 @@
 #set audio output to 3.5 mm and made sure volume was turned up
 #instaled omxplayer
 
+
+#what did we use to set the volume?
+
 import time
 import os
 import random
